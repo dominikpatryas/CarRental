@@ -1,0 +1,31 @@
+﻿@model ICollection<Car>
+@{
+    ViewData["Title"] = "CarView";
+}
+
+<h1>Car</h1>
+
+<div class="container-fluid">
+    <div class="container">
+        <div>
+
+            <div class="card">
+                <h5 class="card-header text-center">car.brand + ' ' + car.model</h5>
+                <div class="card-body">
+
+                    <img class="card-img-top mr-5 pull-left rounded border border-secondary" src="" alt="">
+
+                    <h5 class="card-title">Pojemność silnika: car.engineL</h5>
+                    <h5 class="card-title">Moc silnika: car.horsePower km</h5>
+                    <h5 class="card-title">Skrzynia biegów: car.gear</h5>
+                    <h5 class="card-title">Rok produkcji: car.yearr</h5>
+                    <h5 class="card-title">Przyspieszenie (0-100km/h): car.accelerations</h5>
+                    <h4 class="card-title">Cena za dobę bez limitu kilmetrów: car.price zł </h4>
+
+                    <a href="#" class="btn btn-primary mt-3">Zarezerwuj!</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
