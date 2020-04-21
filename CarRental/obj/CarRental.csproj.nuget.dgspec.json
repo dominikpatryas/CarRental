@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dominik\\source\\repos\\CarRental\\CarRental\\CarRental.csproj": {}
+    "D:\\CarRental\\CarRental\\CarRental.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dominik\\source\\repos\\CarRental\\CarRental\\CarRental.csproj": {
+    "D:\\CarRental\\CarRental\\CarRental.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dominik\\source\\repos\\CarRental\\CarRental\\CarRental.csproj",
+        "projectUniqueName": "D:\\CarRental\\CarRental\\CarRental.csproj",
         "projectName": "CarRental",
-        "projectPath": "C:\\Users\\Dominik\\source\\repos\\CarRental\\CarRental\\CarRental.csproj",
-        "packagesPath": "C:\\Users\\Dominik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dominik\\source\\repos\\CarRental\\CarRental\\obj\\",
+        "projectPath": "D:\\CarRental\\CarRental\\CarRental.csproj",
+        "packagesPath": "C:\\Users\\domin\\.nuget\\packages\\",
+        "outputPath": "D:\\CarRental\\CarRental\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dominik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\domin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -41,6 +41,18 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.1, )"
