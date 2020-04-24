@@ -7,13 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CarRental.Controllers
 {
+    [Route("[controller]")]
     public class AuthController : Controller
     {
         public IActionResult Index()
         {
             return View();
         }
-
+        [HttpGet("register")]
         public IActionResult RegisterLoginProcess()
         {
             return View();

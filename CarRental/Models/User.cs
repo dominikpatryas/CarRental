@@ -7,7 +7,6 @@ namespace CarRental.Models
 {
     public class User
     {
-
         public int Id { get; set; }
         public string Username { get; set; }
         public byte[] PasswordHash { get; set; }
@@ -16,6 +15,5 @@ namespace CarRental.Models
         public DateTime DateOfBirth { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
-
     }
 }

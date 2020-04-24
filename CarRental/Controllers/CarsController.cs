@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CarRental.Controllers
 {
+    [Route("[controller]")]
     public class CarsController : Controller
     {
         private readonly ICarRepository _repo;
@@ -29,10 +30,14 @@ namespace CarRental.Controllers
             return View(carsToReturn);
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Car(int id)
         {
-            return View();
+            var car = await _repo.GetCar(id);
+
+            var carToReturn = _mapper.Map<CarForDetailed>(car);
+
+            return View(carToReturn);
         }
 
         [HttpPut("{id}")]

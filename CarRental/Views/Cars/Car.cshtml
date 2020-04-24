@@ -1,31 +1,62 @@
-﻿@model ICollection<Car>
+﻿@model CarRental.Dtos.CarForDetailed
 @{
     ViewData["Title"] = "CarView";
 }
-
-<h1>Car</h1>
-
-<div class="container-fluid">
     <div class="container">
-        <div>
+        <h1 class="my-4">
+            Rezerwacja
+            <small>@Model?.Brand @Model?.Model</small>
+        </h1>
+        <img class="img-fluid w-50 h-100" src="@Model.PhotoUrl" alt="">
+        <!-- <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery> -->
 
-            <div class="card">
-                <h5 class="card-header text-center">car.brand + ' ' + car.model</h5>
-                <div class="card-body">
+        <h3 class="my-3">Podaj termin</h3>
+        <p id="reservation" class="text-center">Ostatnia rezerwacja: @Model?.Rent | date: </p>
 
-                    <img class="card-img-top mr-5 pull-left rounded border border-secondary" src="" alt="">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <form [formGroup]="rentForm" >
+                        <div class="form-group">
+                            <input class="form-control" type="text"
+                                   placeholder="Data rozpoczęcia wynajmu" formControlName="rent">
+                        </div>
 
-                    <h5 class="card-title">Pojemność silnika: car.engineL</h5>
-                    <h5 class="card-title">Moc silnika: car.horsePower km</h5>
-                    <h5 class="card-title">Skrzynia biegów: car.gear</h5>
-                    <h5 class="card-title">Rok produkcji: car.yearr</h5>
-                    <h5 class="card-title">Przyspieszenie (0-100km/h): car.accelerations</h5>
-                    <h4 class="card-title">Cena za dobę bez limitu kilmetrów: car.price zł </h4>
+                        <div class="form-group">
+                            <input class="form-control" type="text"
+                                   placeholder="Data zakończnia wynajmu" formControlName="endrent">
+                        </div>
 
-                    <a href="#" class="btn btn-primary mt-3">Zarezerwuj!</a>
 
+                        <div class="form-group">
+                            <input class="form-control"
+                                   placeholder="Opcjonalna wiadomość *" formControlName="messagerent">
+                        </div>
+
+                        <button type="submit" class="btn btn-success mt-3">Wynajmij</button>
+                    </form>
+                </div>
+                <div class="col">
+                    <h3 class="my-3">Dodatkowe informacje</h3>
+                    <ul>
+                        <li>Wynajem bez kaucji</li>
+                        <li>Do każdego najmu perfuma oraz zapach do samochodu</li>
+                    </ul>
                 </div>
             </div>
+
         </div>
-    </div>
-</div>
+        <hr class="half-rule" />
+        <h3 class="my-4">Inne samochody</h3>
+
+        @*<div class="row">
+
+            <div class="col-md-3 col-sm-6 mb-4" *ngFor="let cary of cars; index as i">
+
+                <a href="#" [routerLink]="['/flota/', cary.id]" routerLinkActive="router-link-active" *ngIf="i < 4">
+                    <img class="img-fluid" src="{{cary.photoUrl}}  " alt="">
+                </a>
+            </div>
+
+
+        </div>*@
